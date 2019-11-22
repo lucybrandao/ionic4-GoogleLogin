@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Hoje
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input placeholder="Enter Input" style="margin: 1em; border-bottom: 1px solid rgba(0, 0, 0, 0.137)"></ion-input>
+  <ion-button style="margin-left: 1em">Adicionar</ion-button>
+
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>{{ header }}:</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let task of tasks">
+      <ion-label>{{ task }}</ion-label>
+      <ion-checkbox slot="start"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
